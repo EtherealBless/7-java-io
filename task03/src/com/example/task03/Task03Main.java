@@ -15,7 +15,8 @@ public class Task03Main {
     }
 
     public static String readAsString(InputStream inputStream, Charset charset) throws IOException {
-        // your implementation here
-        return "";
+        byte[] bytes = new byte[inputStream.available()];
+        inputStream.read(bytes);
+        return new String(bytes, charset);
     }
 }
